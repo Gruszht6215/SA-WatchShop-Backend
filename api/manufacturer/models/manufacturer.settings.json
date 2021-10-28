@@ -1,0 +1,28 @@
+{
+  "kind": "collectionType",
+  "collectionName": "manufacturer",
+  "info": {
+    "name": "manufacturer"
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "tel_no": {
+      "type": "string",
+      "default": "0882931818",
+      "required": true
+    },
+    "spare_parts": {
+      "via": "manufacturer",
+      "collection": "spare-part"
+    }
+  }
+}

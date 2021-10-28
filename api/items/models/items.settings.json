@@ -1,0 +1,54 @@
+{
+  "kind": "collectionType",
+  "collectionName": "items",
+  "info": {
+    "name": "Items",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "price": {
+      "type": "integer"
+    },
+    "status": {
+      "type": "boolean"
+    },
+    "picture": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "users": {
+      "via": "items",
+      "plugin": "users-permissions",
+      "collection": "user"
+    },
+    "invoice": {
+      "via": "items",
+      "model": "invoice"
+    },
+    "remain": {
+      "type": "biginteger",
+      "required": true
+    },
+    "spare_parts": {
+      "via": "items",
+      "collection": "spare-part"
+    }
+  }
+}

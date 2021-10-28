@@ -1,0 +1,35 @@
+{
+  "kind": "collectionType",
+  "collectionName": "spare_part",
+  "info": {
+    "name": "spare_part",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "remain": {
+      "type": "biginteger"
+    },
+    "price": {
+      "type": "biginteger"
+    },
+    "items": {
+      "via": "spare_parts",
+      "collection": "items",
+      "dominant": true
+    },
+    "manufacturer": {
+      "model": "manufacturer",
+      "via": "spare_parts"
+    }
+  }
+}

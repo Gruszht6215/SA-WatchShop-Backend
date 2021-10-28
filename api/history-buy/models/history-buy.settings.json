@@ -1,0 +1,31 @@
+{
+  "kind": "collectionType",
+  "collectionName": "history_buys",
+  "info": {
+    "name": "HistoryBuy",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": false
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name_item": {
+      "type": "string"
+    },
+    "price_all": {
+      "type": "integer"
+    },
+    "date": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "integer"
+    },
+    "name_user": {
+      "type": "string"
+    }
+  }
+}
